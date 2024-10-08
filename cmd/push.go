@@ -18,7 +18,6 @@ var pushCmd = &cobra.Command{
 
 func pushCommit(branch string) {
 	pkg.RunCommand("git", "push", "origin", branch)
-	pkg.RunCommand("git", "push", "snam", branch)
 }
 
 func init() {

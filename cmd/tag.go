@@ -53,13 +53,11 @@ func substituteTag(version string) {
 func createTag(version string) {
 	pkg.RunCommand("git", "tag", version)
 	pkg.RunCommand("git", "push", "origin", version)
-	pkg.RunCommand("git", "push", "snam", version)
 }
 
 func deleteTag(version string) {
 	pkg.RunCommand("git", "tag", "-d", version)
 	pkg.RunCommand("git", "push", "--delete", "origin", version)
-	pkg.RunCommand("git", "push", "--delete", "snam", version)
 }
 
 func latestTag() {
